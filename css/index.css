@@ -18,6 +18,29 @@ ul {
   list-style: none;
 }
 
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: #FFEB00;
+  top: 0%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay h1 {
+  font-size: 100px;
+  letter-spacing: 20px;
+}
+
+.overlay span {
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+
 .header__nav {
   width: 200px;
   height: 100vh;
@@ -98,7 +121,7 @@ ul {
   color: #494949;
 }
 
-.hero__text .title {
+.hero__title {
   font-size: 150px;
 }
 
@@ -148,5 +171,123 @@ ul {
 
 .hero__media ul li:hover {
   background: #FFEB00;
+}
+
+.ellipse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border-style: solid;
+  z-index: -1;
+}
+
+.ellipse__container {
+  width: 608px;
+  height: 608px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.ellipse__circle1, .ellipse__circle2 {
+  border-style: solid;
+  width: 64px;
+  height: 64px;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  position: absolute;
+}
+
+.ellipse__circle1 {
+  top: 150px;
+  left: 150px;
+}
+
+.ellipse__circle2 {
+  bottom: 150px;
+  right: 130px;
+}
+
+.ellipse__circle1::before, .ellipse__circle1::after, .ellipse__circle2::before, .ellipse__circle2::after {
+  content: '';
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ellipse__circle1::before, .ellipse__circle2::before {
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  z-index: 1;
+}
+
+.ellipse__circle1::after, .ellipse__circle2::after {
+  width: 40px;
+  height: 40px;
+  background: #FFEB00;
+}
+
+.ellipse__circle1 span,
+.ellipse__circle2 span {
+  position: absolute;
+  top: 25px;
+  width: 100px;
+  font-size: 14px;
+}
+
+.ellipse__circle1 span {
+  left: 75px;
+}
+
+.ellipse__circle2 span {
+  left: -90px;
+}
+
+.thin {
+  width: 100%;
+  height: 100%;
+  border-width: 1px;
+  border-color: #494949;
+  opacity: .5;
+}
+
+.thick {
+  width: 93%;
+  height: 93%;
+  border-width: 10px;
+  border-color: #fff;
+  transform: rotate(-45deg);
+  top: 12px;
+  left: 12px;
+}
+
+.yellow {
+  width: 93%;
+  height: 93%;
+  border-width: 10px;
+  border-color: #FFEB00 transparent;
+  transform: rotate(-45deg);
+  top: 12px;
+  left: 12px;
+  animation: ellipseRotate 15s ease-in-out infinite;
+}
+
+@keyframes ellipseRotate {
+  0% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(-405deg);
+  }
 }
 /*# sourceMappingURL=index.css.map */
