@@ -1,0 +1,72 @@
+.header {
+    &__nav {
+        width: 200px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        flex: 0 0 50%;
+        background: #FFEB00;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__logo h1 {
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 16px;
+        line-height: 2;
+    }
+
+    &__logo span {
+        font-size: 60px;
+        line-height: 1;
+    }
+
+    &__menu-links {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        text-align: right;
+        padding-top: 50px;
+    }
+
+    &__menu-links ul {
+        width: 100%;
+    }
+
+    &__menu-links ul li {
+        padding: 10px;
+        color: #494949;
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    &__menu-links ul li:hover {
+        background: #494949;
+        color: #fff;
+    }
+
+    &__scrolldown {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        transform: rotate(-90deg);
+    }
+
+    &__scrolldown::before {
+        display: inline-block;
+        content: "";
+        border-top: 1px solid #000;
+        width: 65px;
+        margin: 0 10px 0 0;
+        transform: translateY(10px);
+    }
+}

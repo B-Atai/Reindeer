@@ -1,0 +1,62 @@
+.hero {
+    &__text {
+        position: absolute;
+        top: 25%;
+        right: 180px;
+        transform: translateY(-50%);
+        text-align: right;
+        color: #494949;
+    }
+
+    &__text .title {
+        font-size: 150px;
+    }
+
+    &__watchnow {
+        position: absolute;
+        top: 60%;
+        right: 0;
+        transform: translateY(-50%);
+        background: #FFEB00;
+        padding: 30px 180px 30px 30px;
+    }
+
+    &__watchnow a {
+        text-decoration: none;
+        color: #000;
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        border-bottom: 3px solid #000;
+        padding-bottom: 5px;
+    }
+
+    .fa-play {
+        color: #fff;
+        font-size: 30px;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+
+    &__media {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 20px;
+    }
+
+    &__media ul li {
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        font-size: 20px;
+        color: #494949;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
+    &__media ul li:hover {
+        background: #FFEB00;
+    }
+}
